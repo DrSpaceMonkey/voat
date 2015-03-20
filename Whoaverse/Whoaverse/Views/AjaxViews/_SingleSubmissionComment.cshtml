@@ -78,7 +78,6 @@
     }
 
     <div class="entry unvoted">
-
         <div class="collapsed" style='@collapsedComment'>
             <a href="#" class="expand" onclick="return showcomment(@Model.Id)">[+]</a>
             @if (Model.Name != "deleted")
@@ -147,7 +146,7 @@
                 {
                     <div class="usertext-body may-blank-within" id="commentContent-@Model.Id">
                         <div class="md">
-                            @Html.Raw(@Formatting.FormatMessage(WebUtility.HtmlDecode(Model.CommentContent)))
+                            @Html.Raw(@Formatting.FormatMessage(Model.CommentContent))
                         </div>
                     </div>
                 }

@@ -266,6 +266,8 @@
     <Compile Include="Controllers\SetsController.cs" />
     <Compile Include="MessagingHub.cs" />
     <Compile Include="Models\AddSet.cs" />
+    <Compile Include="Models\AddSubmissionSelfpost.cs" />
+    <Compile Include="Models\MarkdownPreviewModel.cs" />
     <Compile Include="Models\Moderatorinvitation.cs">
       <DependentUpon>WhoaverseEntityDataModel.tt</DependentUpon>
     </Compile>
@@ -386,12 +388,11 @@
     <Compile Include="Models\AddSubverse.cs" />
     <Compile Include="Models\AddComment.cs" />
     <Compile Include="Models\AddSubmissionLinkpost.cs" />
-    <Compile Include="Models\AddSubmissionSelfpost.cs" />
+    <Compile Include="Models\SubmissionMetaData.cs" />
     <Compile Include="Models\Cla.cs" />
     <Compile Include="Models\ViewModels\ActiveSubverseViewModel.cs" />
     <Compile Include="Models\ViewModels\CommentViewModel.cs" />
     <Compile Include="Models\EditSubmission.cs" />
-    <Compile Include="Models\EditComment.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ViewModels\PrivateMessageComposeViewModel.cs" />
     <Compile Include="Models\ViewModels\SearchInSubverseViewModel.cs" />

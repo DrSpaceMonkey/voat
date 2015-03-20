@@ -12,14 +12,16 @@ All portions of the code written by Voat are Copyright (c) 2014 Voat
 All Rights Reserved.
 */
 
-using System;
+using System.ComponentModel.DataAnnotations;
+using System.Web.Mvc;
 
 namespace Voat.Models
 {
-    //[Serializable]
-    public class EditComment
+    public class MarkdownPreviewModel
     {
-        public int CommentId { get; set; }
-        public string CommentContent { get; set; }
+        [Required(ErrorMessage = "Comment text is required. Please fill this field.")]
+        [StringLength(10000, ErrorMessage = "Comment text is limited to 10.000 characters.")]
+        [AllowHtml]
+        public string MessageContent { get; set; }
     }
 }

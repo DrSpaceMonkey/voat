@@ -17,17 +17,16 @@ using System.Web.Mvc;
 
 namespace Voat.Models
 {
-    [MetadataType(typeof(CommentMetaData))]
-    public partial class Comment
+    [MetadataType(typeof(DiscussionMetaData))]
+    public partial class Message
     {
 
     }
 
-    public class CommentMetaData
+    public class DiscussionMetaData
     {
-        [Required(ErrorMessage = "Comment text is required. Please fill this field.")]
-        [StringLength(10000, ErrorMessage = "Comment text is limited to 10.000 characters.")]
         [AllowHtml]
-        public string CommentContent { get; set; }
+        [StringLength(10000, ErrorMessage = "Submission text is limited to 10.000 characters.")]
+        public string MessageContent { get; set; }
     }
 }

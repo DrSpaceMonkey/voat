@@ -10,10 +10,11 @@ the specific language governing rights and limitations under the License.
 
 All portions of the code written by Voat are Copyright (c) 2014 Voat
 All Rights Reserved.
- */
+*/
 
 using System;
 using System.ComponentModel.DataAnnotations;
+using System.Web.Mvc;
 
 namespace Voat.Models
 {
@@ -32,15 +33,14 @@ namespace Voat.Models
         public int Type { get; set; }
         public Nullable<double> Rank { get; set; }
 
-
         [Required(ErrorMessage = "Message title is required. Please fill this field.")]
         [StringLength(200, ErrorMessage = "Submission title must be at least 10 and no more than 200 characters long.", MinimumLength = 10)]
         public string Title { get; set; }
 
-        [Required(ErrorMessage = "You must type a subverse to send the post to. Example: programming, videos, pics, funny.")]
         [StringLength(200, ErrorMessage = "Subverse title is limited to 20 characters.")]
         public string Subverse { get; set; }
 
+        [AllowHtml]
         [StringLength(10000, ErrorMessage = "Submission text is limited to 10.000 characters.")]
         public string MessageContent { get; set; }
     }
